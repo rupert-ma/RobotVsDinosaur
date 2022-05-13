@@ -8,6 +8,7 @@ class Robot:
         self.choose_weapon()
 
     def attack(self, new_dinosaur):
+        self.choose_weapon()
         new_dinosaur.health -= self.weapon.attack_power
     
     def choose_weapon(self):
