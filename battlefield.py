@@ -14,7 +14,6 @@ def run_game(new_robot, new_dinosaur):
     attacker_one = ''
     attacker_two = ''
     intiative = random.randrange(1,3)
-    print(intiative)
     if intiative == 1:
         attacker_one = new_robot
         attacker_two = new_dinosaur
