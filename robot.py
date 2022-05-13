@@ -7,11 +7,11 @@ class Robot:
         self.health = 100
         self.choose_weapon()
 
+#conducts attack when called
     def attack(self, new_dinosaur):
         self.choose_weapon()
-
         new_dinosaur.health -= self.weapon.attack_power
-    
+    #allows choice of new weapon when called
     def choose_weapon(self):
         input_is_valid = False
         while input_is_valid == False:

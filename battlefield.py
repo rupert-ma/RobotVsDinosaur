@@ -1,11 +1,13 @@
-
+# roll for initiative, who goes first
+# per attack determine if miss = no hit, partial hit = half attack power, full hit = full attack power
+#    determine attack choice, does user have an input for each attack?
 
 def run_game(new_robot, new_dinosaur):
     print('Dinosaurs starting health is:')
     print(new_dinosaur.health)
     print('Robots starting health is:')
     print(new_robot.health)
-
+#loops through attacks and declares winner at 0 hitpoints
     is_dead = False
     while is_dead == False:
         if new_dinosaur.health > 0:
