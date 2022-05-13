@@ -1,8 +1,9 @@
 from robot import Robot
 
-class fleet:
+class Fleet:
     def __init__(self):
         self.robots = []
+        self.set_robots()
     
     def set_robots(self):
         first_robot = Robot(True)
