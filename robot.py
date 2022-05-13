@@ -9,12 +9,13 @@ class Robot:
 
     def attack(self, new_dinosaur):
         self.choose_weapon()
+
         new_dinosaur.health -= self.weapon.attack_power
     
     def choose_weapon(self):
-        user_weapon = input('Press 1 for Mega Blaster 3000, Press 2 for Uber Dagger of Destruction, Press 3 for Broadsword of Total Annihillation: ')
         input_is_valid = False
         while input_is_valid == False:
+            user_weapon = input('Press 1 for Mega Blaster 3000, Press 2 for Uber Dagger of Destruction, Press 3 for Broadsword of Total Annihillation: ')
             if int(user_weapon) == 1:
                 self.weapon = Weapon('Mega Blaster 3000', 20)
                 input_is_valid = True
@@ -27,3 +28,4 @@ class Robot:
             else:
                 print("Your selection wasn't recognized please try again")
                 input_is_valid = False
+                

@@ -8,13 +8,13 @@ def run_game(new_robot, new_dinosaur):
 
     is_dead = False
     while is_dead == False:
-        new_dinosaur.attack(new_robot)
-        print('Robots new health is ' + str(new_robot.health))
-
-        new_robot.attack(new_dinosaur)
-        print('dinosaurs new health is ' + str(new_dinosaur.health))
-
-        if new_dinosaur.health == 0:
+        if new_dinosaur.health > 0:
+            new_dinosaur.attack(new_robot)
+            print('Robots new health is ' + str(new_robot.health))
+        elif new_dinosaur.health == 0:
             is_dead = True
-        if new_robot.health == 0:
+        if new_robot.health > 0:
+            new_robot.attack(new_dinosaur)
+            print('dinosaurs new health is ' + str(new_dinosaur.health))
+        elif new_robot.health == 0:
             is_dead = True
