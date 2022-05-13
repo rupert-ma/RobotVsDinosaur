@@ -5,7 +5,7 @@ class fleet:
         self.robots = []
     
     def set_robots(self):
-        first_robot = Robot('')
-        second_robot = Robot('')
-        third_robot = Robot('')
+        first_robot = Robot(True)
+        second_robot = Robot(True)
+        third_robot = Robot(True)
         self.robots = [first_robot, second_robot, third_robot]

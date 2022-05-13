@@ -1,7 +1,6 @@
 import random
-# roll for initiative, who goes first
-# per attack determine if miss = no hit, partial hit = half attack power, full hit = full attack power
-#    determine attack choice, does user have an input for each attack?
+#TODO per attack determine if miss = no hit, partial hit = half attack power, full hit = full attack power
+#TODO    determine attack choice, does user have an input for each attack?
 
 def run_game(new_robot, new_dinosaur):
     print('Dinosaurs starting health is:')
