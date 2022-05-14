@@ -1,3 +1,4 @@
+import random
 from weapon import Weapon
 
 class Robot:
@@ -17,7 +18,17 @@ class Robot:
     #conducts attack when called
     def attack(self, new_dinosaur):
         self.choose_weapon()
-        new_dinosaur.health -= self.weapon.attack_power
+        #randomly determines attack chance and adjusts attack power appropriately
+        attack_chance = random.randrange(0,3)
+        if attack_chance == 0:
+            new_dinosaur.health -= 0
+            print(f'{self.name} Attack missed')
+        if attack_chance == 1:
+            new_dinosaur.health -= self.weapon.attack_power - 10
+            print(f'{self.name} Partially hit')
+        if attack_chance == 2:
+            new_dinosaur.health -= self.weapon.attack_power
+            print(f'{self.name} Fully hit')
 
     #allows choice of new weapon when called
     def choose_weapon(self):
