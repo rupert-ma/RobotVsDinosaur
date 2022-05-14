@@ -3,7 +3,8 @@ class Dinosaur:
         self.name = ''
         self.attack_power = 20
         self.health = 100
-        part_of_herd = part_of_herd
+        self.part_of_herd = part_of_herd
+        self.part_of_fleet = False
         self.set_name()
 
     def set_name(self):

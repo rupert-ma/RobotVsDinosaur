@@ -1,33 +1,8 @@
-from battlefield import run_game
-from robot import Robot
-from dinosaur import Dinosaur
-from herd import Herd
-from fleet import Fleet
+from battlefield import run_one_v_one, run_three_v_three
 
 print('Welcome to Robot vs Dinosaur, the ultimate Robot vs Dinsaur Battle to see who is better a robot or a dinosaur!!!')
 battle_type = input('Press 1 to see a one on one battle, press 2 to see a three vs three battle: ')
 if int(battle_type) == 1:
-    # 1v1 section Fighter creation, Robot()/Dinosaur() parameter is False to indicate is not part of a fleet/herd
-    print('Ok, Lets create our fighters!')
-    new_robot = Robot(False)
-    print('The Robots name is ' + new_robot.name)
-    print(f'{new_robot.name} has {str(new_robot.health)} hitpoints')
-    print(f'{new_robot.name} will start with the {new_robot.weapon.name} that has {str(new_robot.weapon.attack_power)} attack power')
-
-    new_dinosaur = Dinosaur(False)
-    print('The Dinosaurs name is ' + new_dinosaur.name)
-    print(f'{new_dinosaur.name} has {str(new_dinosaur.health)} hitpoints')
-    print(f'{new_dinosaur.name} will start with {str(new_dinosaur.attack_power)} attack power')
-
-    # go to battlefield for attacks
-    print('Excellent! Lets head to the battlefield and see who will win')
-    run_game(new_robot, new_dinosaur)
-#3v3 section
+    run_one_v_one()
 elif int(battle_type) == 2:
-    print('Ok, Lets create a fleet of three dinosaurs')
-    new_herd = Herd()
-    print('Ok, Lets create a fleet of three robots')
-    new_fleet = Fleet()
-    print(new_fleet.robots[0].name)
-    print(new_fleet.robots[0].weapon.name)
-    print(new_herd.dinosaurs[0].name)
+    run_three_v_three()

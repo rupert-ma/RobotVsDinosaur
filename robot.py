@@ -6,6 +6,7 @@ class Robot:
         self.weapon = ''
         self.health = 100
         self.part_of_fleet = part_of_fleet
+        self.part_of_herd = False
         self.set_name()
         self.choose_weapon()
 
